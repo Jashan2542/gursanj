@@ -1,0 +1,126 @@
+/* General Reset */
+body {
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Top Header */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: white;
+    box-shadow: 4px 4px 6px rgba(54, 131, 220, 0.226);
+    margin: 0px 30px;
+    margin-top: 12px;
+    border-radius: 30px 0px 30px 0px;
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.company-name a{
+    text-decoration: none;
+     font-weight: 600;
+    font-size: 20px;
+    color: #003066;
+}
+
+/* Menu */
+.menu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 0 18px;
+    font-weight: bold;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #002855;
+    font-weight: 500;
+    transition: color 0.3s, font-size 0.3s;
+    cursor: pointer;
+}
+
+.menu ul li a:hover {
+    color:  #002855;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Stack elements vertically on smaller screens */
+    .top-header {
+        flex-direction: column;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    /* Logo section */
+    .logo-section {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    /* Logo size */
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .company-name {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Menu */
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .menu ul li a {
+        font-size: 14px;
+    }
+}
+
+/* For even smaller devices (like phones in portrait mode) */
+@media (max-width: 480px) {
+    /* Reduce padding for even smaller screens */
+    .top-header {
+        padding: 5px 15px;
+    }
+
+    .company-name {
+        font-size: 16px;
+    }
+
+    .menu ul li a {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,126 @@
+.team-section {
+  margin-top: 15px;
+  position: relative;
+  padding: 60px 80px;
+  background: linear-gradient(
+      to right,
+      #ffffff 0%,      /* keep pure white in the center */
+      #f0fcfe 40%,     /* very light cyan */
+      #d2f6fc 80%,     /* medium cyan */
+      #aee7f4 100%     /* darker cyan at far right */
+  );
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.team-left {
+    flex: 1;
+    max-width: 40%;
+}
+
+.team-heading {
+    font-size: 48px;
+    font-weight: 800;
+    color: #0056d2; /* Blue heading */
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.team-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    font-weight: 600;
+}
+
+.team-right {
+    flex: 1;
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 35px;
+    position: relative;
+    min-height: auto;
+}
+
+.team-member {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #111;
+    font-weight: 500;
+    text-align: left;
+}
+
+.team-member strong {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.inspiration-section {
+    margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 80px;
+  position: relative;
+  background: radial-gradient(
+      ellipse 120% 80% at 0% 50%,
+      #a4edf7 0%,     /* soft cyan near left */
+      #ddf3f6 50%,    /* lighter */
+      #ffffff 100%    /* pure white on right */
+  );
+  min-height: 100vh;
+}
+
+/* Left Content */
+.inspiration-text {
+  flex: 1;
+  max-width: 40%;
+}
+
+.inspiration-text h1 {
+  font-size: 60px;
+  font-weight: 800;
+  color: #0047ab; /* bold blue */
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.inspiration-email {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-top: 100px;
+}
+
+/* Right Image */
+.inspiration-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.inspiration-image img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* Decorative Waves */
+.inspiration-waves {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 250px;
+  background: url("../images/waves.png") no-repeat center;
+  background-size: contain;
+  pointer-events: none;
+}

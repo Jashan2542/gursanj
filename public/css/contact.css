@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 0 5%;
+      margin-top: 15px;
+  position: relative;
+  padding: 60px 80px;
+  background: linear-gradient(
+      to right,
+      #ffffff 0%,      /* keep pure white in the center */
+      #f0fcfe 40%,     /* very light cyan */
+      #d2f6fc 80%,     /* medium cyan */
+      #aee7f4 100%     /* darker cyan at far right */
+  );
+}
+
+.left h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #0046b8;
+    line-height: 1.2;
+}
+
+.contact {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.contact a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #0046b8;
+}
+
+.right {
+    width: 60%;
+    position: relative;
+}
