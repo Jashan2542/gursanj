@@ -18,9 +18,9 @@ class ProjectController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required',
-            'website_link' => 'nullable|url',
-            'android_link' => 'nullable|url',
-            'ios_link' => 'nullable|url',
+            'website_link' => 'nullable|string',
+            'android_link' => 'nullable|string',
+            'ios_link' => 'nullable|string',
         ]);
 
         Project::create($request->all());
@@ -44,9 +44,9 @@ class ProjectController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required',
-            'website_link' => 'nullable|url',
-            'android_link' => 'nullable|url',
-            'ios_link' => 'nullable|url',
+            'website_link' => 'nullable|string',
+            'android_link' => 'nullable|string',
+            'ios_link' => 'nullable|string',
         ]);
 
         $project->update($request->all());
