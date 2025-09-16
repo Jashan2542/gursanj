@@ -27,6 +27,7 @@
     <h2>Welcome, {{ Auth::guard('admin')->user()->name }}</h2>
 
     <div class="row mt-4">
+        {{-- Projects Card --}}
         <div class="col-md-4">
             <div class="card shadow-sm mb-4">
                 <div class="card-body text-center">
@@ -37,8 +38,19 @@
                 </div>
             </div>
         </div>
+
+        {{-- Blogs Card --}}
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Blogs</h5>
+                    <p class="card-text">Manage all blog posts here.</p>
+                    <a href="{{ route('admin.blogs.index') }}" class="btn btn-primary">View Blogs</a>
+                    <a href="{{ route('admin.blogs.create') }}" class="btn btn-success mt-2">Add Blog</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
 </body>
 </html>

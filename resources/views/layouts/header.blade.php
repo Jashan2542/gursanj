@@ -24,6 +24,7 @@
                     <li><a href="{{URL::to('home')}}">Home</a></li> <!-- Home link -->
                     <li><a href="{{URL::to('project')}}">Projects</a></li> <!-- Projects link -->
                     <li><a href="{{URL::to('vision')}}">Vision</a></li> <!-- Vision link -->
+                    <li><a href="{{ route('user.blogs.index') }}">Blogs</a></li> <!-- Blog link -->
                     <li><a href="{{URL::to('team')}}">Our Team</a></li> <!-- Team link -->
                     <li><a href="{{URL::to('contact')}}">Contact</a></li> <!-- Contact link -->
                 </ul>

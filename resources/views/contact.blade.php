@@ -1,4 +1,4 @@
-@include('layouts.header', ['title' => 'Home Page']) <!-- Include header layout with dynamic title -->
+@include('layouts.header', ['title' => 'contact Page']) <!-- Include header layout with dynamic title -->
 
 <link rel="stylesheet" href="{{ asset('css/contact.css') }}"> <!-- Contact page specific CSS -->
 

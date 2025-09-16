@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\ProjectPageController;
-
+use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\UserBlogController;
 
 // Route for home page using closure
 Route::get('/', function () {
@@ -50,4 +51,32 @@ Route::middleware('auth:admin')->group(function () {
     Route::put('projects/{project}', [ProjectController::class, 'update'])->name('admin.projects.update');
     Route::delete('projects/{project}', [ProjectController::class, 'destroy'])->name('admin.projects.destroy');
 });
+
+
+Route::prefix('admin')->name('admin.')->group(function () {
+    // Show all blogs
+    Route::get('blogs', [BlogController::class, 'index'])->name('blogs.index');
+
+    // Show create form
+    Route::get('blogs/create', [BlogController::class, 'create'])->name('blogs.create');
+
+    // Store new blog
+    Route::post('blogs', [BlogController::class, 'store'])->name('blogs.store');
+
+    // Show single blog (optional for admin)
+    Route::get('blogs/{blog}', [BlogController::class, 'show'])->name('blogs.show');
+
+    // Show edit form
+    Route::get('blogs/{blog}/edit', [BlogController::class, 'edit'])->name('blogs.edit');
+
+    // Update blog
+    Route::put('blogs/{blog}', [BlogController::class, 'update'])->name('blogs.update');
+
+    // Delete blog
+    Route::delete('blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+});
+
+Route::get('/blogs', [UserBlogController::class, 'index'])->name('user.blogs.index');
+Route::get('/blogs/{id}', [UserBlogController::class, 'show'])->name('user.blogs.show');
+
 
