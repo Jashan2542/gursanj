@@ -1,16 +1,94 @@
-.custom-table {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+/* Page Title */
+.page-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
 }
-.custom-table thead {
-    background-color: #212529;
+
+/* Buttons */
+.btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #4e73df;
     color: #fff;
 }
-.custom-table tbody tr:hover {
-    background-color: #f9f9f9;
+.btn-primary:hover {
+    background: #3759c1;
 }
+
+.btn-secondary {
+    background: #6c757d;
+    color: #fff;
+}
+.btn-secondary:hover {
+    background: #565e64;
+}
+
+.btn-warning {
+    background: #f6c23e;
+    color: #212529;
+}
+.btn-warning:hover {
+    background: #dda20a;
+}
+
+.btn-danger {
+    background: #e74a3b;
+    color: #fff;
+}
+.btn-danger:hover {
+    background: #c0392b;
+}
+
+/* Table Styling */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.custom-table th {
+    background: #4e73df;
+    color: #fff;
+    padding: 14px;
+    font-size: 0.95rem;
+    text-align: left;
+}
+
 .custom-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee;
     vertical-align: middle;
+}
+
+.custom-table tr:hover {
+    background: #f8f9fc;
+}
+
+/* Table Image */
+.table-img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* Pagination */
+.pagination-wrapper {
+    text-align: center;
+    margin-top: 20px;
 }

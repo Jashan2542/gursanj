@@ -1,38 +1,80 @@
-.blog-card {
-    border-radius: 16px;
+/* Blog card */
+.container h2{
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bolder;
+}
+
+/* Blog grid wrapper */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    gap: 5px;
+}
+
+/* Responsive: 1 per row on mobile */
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Blog card button */
+.blog-card.btn-card {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    padding: 0;
+    width: 80%;
+    cursor: pointer;
+    border: none;
 }
 
-.blog-card:hover {
+.blog-card.btn-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
-.blog-card img {
+/* Blog image */
+.blog-card-img {
+    width: 100%;
     height: 220px;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center;
 }
 
-.blog-card h5 {
-    font-weight: 600;
-    line-height: 1.4;
+/* Blog content */
+.blog-card-body {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.blog-card-body .blog-subject {
+    display: inline-block;
+    background: linear-gradient(135deg, #6c63ff, #5a50e6);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 20px;
     margin-bottom: 10px;
 }
 
-.blog-card .badge {
-    font-size: 0.8rem;
-    font-weight: 500;
-    border-radius: 12px;
-    padding: 6px 12px;
+.blog-card-body .blog-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #222;
 }
 
-.blog-content {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333;
-}
-
-.blog-content p {
-    margin-bottom: 1rem;
+.blog-card-body .blog-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
 }

@@ -26,7 +26,7 @@ class BlogController extends Controller
         'subject' => 'required',
         'description' => 'required',
         'published_at' => 'nullable',
-        'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:200',
+        'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
     ]);
 
     $data = $request->all();
@@ -52,7 +52,7 @@ class BlogController extends Controller
         'subject' => 'required',
         'description' => 'required',
         'published_at' => 'nullable|date',
-        'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:200',
+        'image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
     ]);
 
     $data = $request->all();

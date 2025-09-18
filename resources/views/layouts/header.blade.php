@@ -15,7 +15,7 @@
         <div class="top-header"> <!-- Header wrapper -->
 
             <div class="logo-section"> <!-- Logo and company name -->
-                <img src="images/logo.png" alt="Company Logo" class="logo"> <!-- Company logo -->
+               <img src="{{ asset('images/logo.png') }}" alt="Company Logo" class="logo"> <!-- Company logo -->
                 <span class="company-name"><a href="{{URL::to('admin/login')}}">App Innovation 92</a></span> <!-- Company name text -->
             </div>
 

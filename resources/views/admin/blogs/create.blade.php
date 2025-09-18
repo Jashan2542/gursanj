@@ -1,8 +1,9 @@
+<link rel="stylesheet" href="{{ asset('css/blog-form.css') }}">
 
 <div class="container mt-4">
     <h2 class="mb-3">Add New Blog</h2>
 
-    <form action="{{ route('admin.blogs.store') }}" method="POST">
+    <form action="{{ route('admin.blogs.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="mb-3">
@@ -28,12 +29,6 @@
         <input type="file" name="image" class="form-control">
         @error('image') <small class="text-danger">{{ $message }}</small> @enderror
     </div>
-
-        <div class="mb-3">
-            <label class="form-label">Publish Date & Time</label>
-            <input type="datetime-local" name="published_at" class="form-control" value="{{ old('published_at') }}">
-            @error('published_at') <small class="text-danger">{{ $message }}</small> @enderror
-        </div>
 
         <button type="submit" class="btn btn-success">Save Blog</button>
         <a href="{{ route('admin.blogs.index') }}" class="btn btn-secondary">Cancel</a>
