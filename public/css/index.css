@@ -87,6 +87,10 @@
     background: #17a673;
 }
 
+.btn{
+    margin: 5px;
+}
+
 /* Description Column */
 .desc-col {
     max-width: 250px;

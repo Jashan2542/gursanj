@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\ProjectPageController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\UserBlogController;
+use App\Http\Controllers\MessageController;
+
 
 // Route for home page using closure
 Route::get('/', function () {
@@ -24,13 +26,6 @@ Route::view('team','team');
 
 // Route for vision page
 Route::view('vision','vision');
-
-// Route for contact page
-Route::view('contact','contact');
-
-
-
-
 
 Route::prefix('admin')->group(function () {
     Route::get('login', [AuthController::class, 'showLoginForm'])->name('admin.login');
@@ -80,3 +75,11 @@ Route::get('/blogs', [UserBlogController::class, 'index'])->name('user.blogs.ind
 Route::get('/blogs/{id}', [UserBlogController::class, 'show'])->name('user.blogs.show');
 
 
+
+
+// Contact Form (User side)
+Route::get('/contact', [MessageController::class, 'create'])->name('contact.form');
+Route::post('/contact', [MessageController::class, 'store'])->name('contact.store');
+
+// Admin Panel (Message list)
+Route::get('/admin/messages', [MessageController::class, 'index'])->name('admin.messages.index');

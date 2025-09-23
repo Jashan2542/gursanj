@@ -1,80 +1,73 @@
-/* Blog card */
-.container h2{
-    font-size: xx-large;
-    text-align: center;
-    font-weight: bolder;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Blog grid wrapper */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 per row */
-    gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
 }
 
-/* Responsive: 1 per row on mobile */
-@media (max-width: 768px) {
-    .blog-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Blog card button */
-.blog-card.btn-card {
-    margin: 50px;
+.blog-card {
     display: flex;
     flex-direction: column;
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
     background: #fff;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: left;
-    padding: 0;
-    width: 80%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     cursor: pointer;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
     border: none;
+    padding: 0;
 }
 
-.blog-card.btn-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
-/* Blog image */
 .blog-card-img {
     width: 100%;
-    height: 220px;
+    height: 180px;
     background-size: cover;
     background-position: center;
 }
 
-/* Blog content */
 .blog-card-body {
-    padding: 20px;
-    flex-grow: 1;
+    padding: 18px;
 }
 
-.blog-card-body .blog-subject {
+.blog-subject {
     display: inline-block;
-    background: linear-gradient(135deg, #6c63ff, #5a50e6);
-    color: #fff;
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding: 5px 12px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-}
-
-.blog-card-body .blog-title {
-    font-size: 1.25rem;
+    font-size: 0.85rem;
     font-weight: 600;
+    color: #6c63ff;
     margin-bottom: 8px;
-    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.blog-card-body .blog-desc {
+.blog-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.blog-desc {
     font-size: 0.95rem;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.5;
 }

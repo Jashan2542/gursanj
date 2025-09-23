@@ -1,6 +1,8 @@
 /* Blog detail container */
 .blog-detail {
-    margin: 50px;
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
     background: #fff;
     padding: 30px;
     border-radius: 12px;

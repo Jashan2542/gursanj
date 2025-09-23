@@ -1,0 +1,91 @@
+.messages-container {
+    max-width: 1200px;
+    margin: 100px;
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.messages-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 0.5px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 10px;
+}
+
+.messages-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.messages-table thead {
+    background: #6c63ff;
+    color: #fff;
+}
+
+.messages-table th,
+.messages-table td {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #eee;
+}
+
+.messages-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.messages-table tbody tr:hover {
+    background: #f8f9ff;
+    transition: background 0.3s ease;
+}
+
+.no-data {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #888;
+}
+
+.pagination-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Pagination styling (if using Laravel pagination default) */
+.pagination .page-link {
+    color: #6c63ff;
+    border-radius: 6px;
+    margin: 0 4px;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.pagination .page-link:hover {
+    background: #6c63ff;
+    color: #fff;
+}
+
+.pagination .active .page-link {
+    background: #6c63ff;
+    color: #fff;
+    border-color: #6c63ff;
+}

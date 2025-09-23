@@ -50,6 +50,17 @@
                 </div>
             </div>
         </div>
+
+        {{-- Messages Card --}}
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Inspection</h5>
+                    <p class="card-text">View all user contact form messages.</p>
+                    <a href="{{ route('admin.messages.index') }}" class="btn btn-primary">View Messages</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </body>

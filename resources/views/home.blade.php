@@ -92,4 +92,56 @@
             </div>
         </div>
     </section>
+
+    <div class="contact-container">
+    <h2 class="contact-title">Contact Us</h2>
+
+    @if(session('success'))
+        <div class="alert-success-box">{{ session('success') }}</div>
+    @endif
+
+    <form action="{{ route('contact.store') }}" method="POST" class="contact-form">
+        @csrf
+
+        <div class="form-group">
+            <label class="form-label">Title</label>
+            <input type="text" name="title" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Select Service</label>
+            <select name="service" class="form-input" required>
+                <option value="">-- Select Service --</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Mobile App">Mobile App</option>
+                <option value="UI/UX Designing">UI/UX Designing</option>
+                <option value="Quality Analyst">Quality Analyst</option>
+                <option value="Socail Media (Post/Banner)">Socail Media (Post/Banner)</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Name</label>
+            <input type="text" name="name" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input type="text" name="phone" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Description</label>
+            <textarea name="description" rows="4" class="form-input" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message</button>
+    </form>
+</div>
 </main>
