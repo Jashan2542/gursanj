@@ -17,11 +17,12 @@
                 @endif
 
                 {{-- Blog Content --}}
-                <div class="blog-card-body">
-                    <span class="blog-subject">{{ $blog->subject }}</span>
-                    <h5 class="blog-title">{{ $blog->title }}</h5>
-                    <p class="blog-desc">{{ Str::limit($blog->description, 120) }}</p>
-                </div>
+              <div class="blog-card-body">
+                   <span class="blog-subject">{{ $blog->subject }}</span>
+                   <h5 class="blog-title">{{ Str::limit(strip_tags($blog->title), 40) }}</h5>
+                   <p class="blog-desc">{{ Str::limit(strip_tags($blog->description), 100) }}</p>
+              </div>
+
             </button>
         </form>
         @endforeach

@@ -2,7 +2,7 @@
 
 <link rel="stylesheet" href="{{ asset('css/vision.css') }}"> <!-- Vision page specific CSS -->
 
-<section>
+<section class="main">
     <div class="vision-section"> <!-- Vision section container -->
         <div class="vision-content"> <!-- Vision text content -->
             <h1 class="vision-title">VISION</h1> <!-- Vision title -->

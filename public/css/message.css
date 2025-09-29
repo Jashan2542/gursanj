@@ -89,3 +89,30 @@
     color: #fff;
     border-color: #6c63ff;
 }
+
+/* ===== View Button ===== */
+.btn-view {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 8px rgba(52, 152, 219, 0.3);
+}
+
+.btn-view:hover {
+    background: linear-gradient(135deg, #2980b9, #1f5f8a);
+    box-shadow: 0 5px 12px rgba(52, 152, 219, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-view:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.4);
+}

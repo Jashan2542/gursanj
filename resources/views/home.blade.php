@@ -2,13 +2,15 @@
 
 <link rel="stylesheet" href="{{ asset('css/home.css') }}"> <!-- Home page specific CSS -->
 
-<main>
+<main class="main">
     <!-- Portfolio Section -->
     <section class="portfolio">
         <div class="container">
             <p class="tagline">Innovation at the<br>Heart of Progress</p> <!-- Tagline -->
             <h1 class="title">PORTFOLIO</h1> <!-- Portfolio title -->
-            <p class="email">app92innovation@gmail.com</p> <!-- Contact email -->
+            <p class="contact">
+                <a href="mailto:app92innovation@gmail.com">app92innovation@gmail.com</a> <!-- Email link -->
+            </p> <!-- Contact email -->
         </div>
         <div class="portfolio-img"> <!-- Portfolio image -->
              <img src="{{ asset('images/inspire.png') }}" alt="Logo">
@@ -84,7 +86,9 @@
                     excellence. Our mission is to deliver impactful solutions that 
                     drive growth and success.
                 </p>
-                 <p class="email"> app92innovation@gmail.com</p>
+                 <p class="about-us-contact">
+                <a href="mailto:app92innovation@gmail.com">app92innovation@gmail.com</a> <!-- Email link -->
+            </p> <!-- Contact email -->
             </div>
 
             <div class="about-right"> <!-- About us image -->
@@ -110,7 +114,7 @@
 
         <div class="form-group">
             <label class="form-label">Select Service</label>
-            <select name="service" class="form-input" required>
+            <select name="service" class="form-input-service" required>
                 <option value="">-- Select Service --</option>
                 <option value="Web Development">Web Development</option>
                 <option value="Mobile App">Mobile App</option>

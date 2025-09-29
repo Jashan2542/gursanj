@@ -7,7 +7,7 @@ use App\Http\Controllers\ProjectPageController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\UserBlogController;
 use App\Http\Controllers\MessageController;
-
+use App\Http\Controllers\Admin\MessageShowController;
 
 // Route for home page using closure
 Route::get('/', function () {
@@ -83,3 +83,6 @@ Route::post('/contact', [MessageController::class, 'store'])->name('contact.stor
 
 // Admin Panel (Message list)
 Route::get('/admin/messages', [MessageController::class, 'index'])->name('admin.messages.index');
+
+Route::get('/admin/messages/{id}', [MessageShowController::class, 'show'])
+    ->name('admin.messages.show');

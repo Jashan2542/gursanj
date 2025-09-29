@@ -44,7 +44,7 @@
 
         <div class="form-group">
             <label class="form-label">Select Service</label>
-            <select name="service" class="form-input" required>
+            <select name="service" class="form-input-service" required>
                 <option value="">-- Select Service --</option>
                 <option value="Web Development">Web Development</option>
                 <option value="Mobile App">Mobile App</option>

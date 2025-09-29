@@ -54,7 +54,7 @@ body {
     max-width: 650px;
     margin: 50px auto;
     padding: 40px;
-    background: #fff;
+    background: #f8f8f8d2;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -93,6 +93,15 @@ body {
 }
 
 .form-input {
+    width: 95%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input-service {
     width: 100%;
     padding: 12px 14px;
     border: 1px solid #ddd;

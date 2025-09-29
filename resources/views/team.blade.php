@@ -2,6 +2,7 @@
 
 <link rel="stylesheet" href="{{ asset('css/team.css') }}"> <!-- Team page specific CSS -->
 
+<main class="main">
 <section class="team-section">
     <div class="team-container"> <!-- Main team section container -->
         <div class="team-left"> <!-- Left side with heading and description -->
@@ -43,3 +44,4 @@
             <img src="{{ asset('images/inspire.png') }}" alt="Team Meeting">
         </div>
 </section>
+</main>

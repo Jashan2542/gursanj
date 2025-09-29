@@ -3,7 +3,7 @@
 <div class="container mt-4">
     <h2 class="mb-3">Edit Blog</h2>
 
-    <form action="{{ route('admin.blogs.update', $blog->id) }}" method="POST">
+    <form action="{{ route('admin.blogs.update', $blog->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
 
@@ -26,11 +26,17 @@
         </div>
 
         @if($blog->image)
-    <div class="mb-3">
-        <p class="form-label">Current Image</p>
-        <img src="{{ asset('storage/'.$blog->image) }}" alt="Blog Image" width="150">
-    </div>
-@endif
+            <div class="mb-3">
+                <p class="form-label">Current Image</p>
+                <img src="{{ asset('storage/'.$blog->image) }}" alt="Blog Image" width="150">
+            </div>
+        @endif
+
+        <div class="mb-3">
+            <label class="form-label">Change Image</label>
+            <input type="file" name="image" class="form-control">
+            @error('image') <small class="text-danger">{{ $message }}</small> @enderror
+        </div>
 
         <button type="submit" class="btn btn-primary">Update Blog</button>
         <a href="{{ route('admin.blogs.index') }}" class="btn btn-secondary">Cancel</a>

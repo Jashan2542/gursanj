@@ -1,3 +1,7 @@
+.main{
+    margin: 0 150px;
+}
+
 /* ===== Global Styles ===== */
 body {
     margin: 0;
@@ -12,7 +16,7 @@ main {
 /* ===== Portfolio Section ===== */
 .portfolio {
     position: relative;
-    padding: 40px 60px;
+    padding: 40px 0;
     height: auto;          
     margin-left: 50px;
     margin-bottom: 40px; 
@@ -51,11 +55,36 @@ main {
     margin: 40px 0;   
 }
 
-.portfolio .email {
-    font-size: 16px;
-    color: #333;
-    margin-top: 30px;  
+.contact {
+    font-size: 1rem;
     font-weight: 600;
+    margin-top: 15px;
+}
+
+.contact a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #0046b8;
+}
+
+.about-us-contact {
+     font-size: 1rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.about-us-contact a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-us-contact a:hover {
+    color: #0046b8;
 }
 
 .portfolio-img{
@@ -190,7 +219,7 @@ main {
     line-height: 1.6;
     color: #333;
     max-width: 450px;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .about-left .email {
@@ -200,13 +229,14 @@ main {
 
 .about-right{
     margin-top: 20px;
+    width: 55%;
 }
 
 .contact-container {
     max-width: 650px;
     margin: 50px auto;
     padding: 40px;
-    background: #fff;
+    background: #f2f2f2ee;
     border-radius: 15px;
     box-shadow: 0 8px 30px rgba(0,0,0,0.1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -245,7 +275,16 @@ main {
 }
 
 .form-input {
-    width: 100%;
+    width: 95%;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input-service{
+     width: 100%;
     padding: 12px 14px;
     border: 1px solid #ddd;
     border-radius: 8px;

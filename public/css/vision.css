@@ -1,3 +1,7 @@
+.main{
+    margin: 0 150px;
+}
+
 .vision-section {
     display: flex;
     justify-content: space-between;
@@ -25,15 +29,15 @@
 }
 
 .vision-title {
-    font-size: 48px;
-    font-weight: bolder;
+    font-size: 40px;
+    font-weight: bold;
     color: #0056b3;
     margin-bottom: 20px;
 }
 
 .vision-text {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1.7;
     color: #333;
 }
@@ -79,7 +83,7 @@
 }
 
 .mission-title {
-    font-size: 48px;
+    font-size: 40px;
     font-weight: 800;
     color: #0056b3;
     margin-bottom: 20px;
@@ -87,6 +91,7 @@
 
 .mission-text {
     font-size: 18px;
+    font-weight: 400;
     line-height: 1.7;
     color: #333;
 }

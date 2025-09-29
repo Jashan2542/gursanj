@@ -5,6 +5,7 @@
         <h2 class="page-title">Manage Projects</h2>
         <div class="btn-group">
             <a href="{{ route('admin.dashboard') }}" class="btn btn-secondary">← Back</a>
+            <a href="{{ route('admin.projects.create') }}" class="btn btn-secondary">+ New Project</a>
         </div>
     </div>
 

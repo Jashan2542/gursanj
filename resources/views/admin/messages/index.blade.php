@@ -7,27 +7,23 @@
         <table class="messages-table">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Title</th>
                     <th>Service</th>
                     <th>Name</th>
-                    <th>Phone</th>
-                    <th>Email</th>
                     <th>Description</th>
-                    <th>Date</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 @forelse($messages as $msg)
                     <tr>
-                        <td>{{ $msg->id }}</td>
                         <td>{{ $msg->title }}</td>
                         <td>{{ $msg->service }}</td>
                         <td>{{ $msg->name }}</td>
-                        <td>{{ $msg->phone }}</td>
-                        <td>{{ $msg->email }}</td>
-                        <td>{{ Str::limit($msg->description) }}</td>
-                        <td>{{ $msg->created_at->format('d M Y') }}</td>
+                        <td>{{ Str::limit($msg->description, 50) }}</td>
+                        <td>
+                        <a href="{{ route('admin.messages.show', $msg->id) }}" class="btn-view">View</a>
+                        </td>
                     </tr>
                 @empty
                     <tr>

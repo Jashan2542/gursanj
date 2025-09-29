@@ -21,7 +21,7 @@
                 </div>
 
                 {{-- Blog Description --}}
-                <p class="blog-desc">{{ $blog->description }}</p>
+                <p class="blog-desc">{!! strip_tags($blog->description, '<b><u>') !!}</p>
             </div>
         </div>
     </div>
