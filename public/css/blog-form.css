@@ -63,6 +63,21 @@ input[type="file"].form-control {
     display: block;
 }
 
+.ck-editor__editable {
+    min-height: 100px; /* same as textarea height */
+    border: 1px solid #ced4da; /* same as bootstrap input */
+    border-radius: 12px; /* rounded like input */
+    padding: 10px; /* inner spacing */
+    background-color: #fff; /* white background */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ck-editor {
+    margin-top: 5px;
+}
+
+
 /* Buttons */
 .btn {
     margin-top: 20px;

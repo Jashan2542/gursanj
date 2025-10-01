@@ -18,8 +18,8 @@
 
                 {{-- Blog Content --}}
               <div class="blog-card-body">
-                   <span class="blog-subject">{{ $blog->subject }}</span>
-                   <h5 class="blog-title">{{ Str::limit(strip_tags($blog->title), 40) }}</h5>
+                   <span class="blog-subject">{{ Str::limit(strip_tags($blog->subject), 25) }}</span>
+                   <h5 class="blog-title">{{ Str::limit(strip_tags($blog->title), 25) }}</h5>
                    <p class="blog-desc">{{ Str::limit(strip_tags($blog->description), 100) }}</p>
               </div>
 

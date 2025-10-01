@@ -29,9 +29,9 @@
                         <span class="text-muted">No Image</span>
                     @endif
                 </td>
-                <td>{{ $blog->title }}</td>
-                <td>{{ Str::limit($blog->description, 50) }}</td>
-                <td>{{ $blog->subject }}</td>
+                <td>{{ Str::limit($blog->title, 30) }}</td>
+                <td>{{ Str::limit(strip_tags($blog->description), 50) }}</td>
+                <td>{{ Str::limit($blog->subject, 30) }}</td> 
                 <td>
                     <a href="{{ route('admin.blogs.edit', $blog->id) }}" class="btn btn-sm btn-warning">Edit</a>
                     <form action="{{ route('admin.blogs.destroy', $blog->id) }}" method="POST" class="d-inline">

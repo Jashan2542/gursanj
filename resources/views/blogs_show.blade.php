@@ -2,27 +2,24 @@
 
 <link rel="stylesheet" href="{{ asset('css/blog-show.css') }}">
 
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <div class="blog-detail">
-                {{-- Blog Image --}}
-                @if($blog->image)
-                    <img src="{{ asset('storage/' . $blog->image) }}" class="img-fluid rounded mb-4" alt="{{ $blog->title }}">
-                @endif
+<div class="blog-detail">
+    <div class="blog-image">
+        @if($blog->image)
+            <img src="{{ asset('storage/' . $blog->image) }}" alt="{{ $blog->title }}">
+        @endif
+    </div>
 
-                {{-- Blog Title --}}
-                <h1 class="fw-bold mb-3">{{ $blog->title }}</h1>
+    <div class="blog-content">
+        <h1 class="blog-title">{{ $blog->title }}</h1>
+        <div class="blog-meta">
+            <span class="blog-subject">{{ $blog->subject }}</span>
+            <span class="blog-date">
+                {{ $blog->published_at ? $blog->published_at->format('d M Y, h:i A') : '' }}
+            </span>
+        </div>
 
-                {{-- Subject + Date --}}
-                <div class="text-muted mb-3">
-                    <span class="badge bg-secondary">{{ $blog->subject }}</span>
-                    <small class="ms-2">{{ $blog->published_at ? $blog->published_at->format('d M Y, h:i A') : '' }}</small>
-                </div>
-
-                {{-- Blog Description --}}
-                <p class="blog-desc">{!! strip_tags($blog->description, '<b><u>') !!}</p>
-            </div>
+        <div class="blog-desc">
+            {!! $blog->description !!}
         </div>
     </div>
 </div>
