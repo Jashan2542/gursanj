@@ -6,11 +6,19 @@
     <!-- Portfolio Section -->
     <section class="portfolio">
         <div class="container">
-            <p class="tagline">Innovation at the<br>Heart of Progress</p> <!-- Tagline -->
+
+            <div class="social-icons">
+                <a href="{{ env('LINKEDIN_URL') }}" target="_blank"><img src="images\link.png" alt="linked-in" class="icon"></a>
+                <a href="{{ env('INSTAGRAM_URL') }}" target="_blank"><img src="images\insta.png" alt="insta" class="icon"></a>
+                <a href="{{ env('WHATSAPP_URL') }}" target="_blank"><img src="images\whatsapp.png" alt="whatsapp" class="icon"></a>
+            </div>
+
+            <p class="tagline">Innovation at the Heart of Progress</p> <!-- Tagline -->
             <h1 class="title">PORTFOLIO</h1> <!-- Portfolio title -->
-            <p class="contact">
-                <a href="mailto:app92innovation@gmail.com">app92innovation@gmail.com</a> <!-- Email link -->
-            </p> <!-- Contact email -->
+            <div class="portfolio-text">
+                I’m a passionate web developer focused on creating clean, responsive, and user-friendly applications.  
+                My portfolio showcases projects that blend creativity with practical, real-world solutions.
+            </div>
         </div>
         <div class="portfolio-img"> <!-- Portfolio image -->
              <img src="{{ asset('images/inspire.png') }}" alt="Logo">

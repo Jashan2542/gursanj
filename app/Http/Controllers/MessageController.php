@@ -27,7 +27,7 @@ class MessageController extends Controller
 
         Message::create($request->all());
 
-        return redirect()->back()->with('success', 'Your message has been submitted successfully!');
+        return redirect()->route('contact.create')->with('success', 'Your message has been submitted successfully!');
     }
 
     // Show all messages in admin panel

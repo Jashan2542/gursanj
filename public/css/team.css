@@ -1,4 +1,4 @@
-.main{
+.main { 
   margin: 0 150px;
 }
 
@@ -8,68 +8,69 @@
   padding: 60px 80px;
   background: linear-gradient(
       to right,
-      #ffffff 0%,      /* keep pure white in the center */
-      #f0fcfe 40%,     /* very light cyan */
-      #d2f6fc 80%,     /* medium cyan */
-      #aee7f4 100%     /* darker cyan at far right */
+      #ffffff 0%,
+      #f0fcfe 40%,
+      #d2f6fc 80%,
+      #aee7f4 100%
   );
   overflow: hidden;
   font-family: 'Arial', sans-serif;
 }
 
-
 .team-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .team-left {
-    flex: 1;
-    max-width: 40%;
+  flex: 1;
+  max-width: 40%;
 }
 
 .team-heading {
-    font-size: 48px;
-    font-weight: 800;
-    color: #0056d2; /* Blue heading */
-    line-height: 1.2;
-    margin-bottom: 20px;
+  font-size: 48px;
+  font-weight: 800;
+  color: #0056d2;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .team-text {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #333;
-    font-weight: 600;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  font-weight: 600;
+  text-align: justify;
 }
 
 .team-right {
-    flex: 1;
-    max-width: 50%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-    gap: 35px;
-    position: relative;
-    min-height: auto;
+  flex: 1;
+  max-width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+  gap: 35px;
+  position: relative;
+  min-height: auto;
 }
 
 .team-member {
-    margin-bottom: 20px;
-    font-size: 14px;
-    color: #111;
-    font-weight: 500;
-    text-align: left;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #111;
+  font-weight: 500;
+  text-align: left;
 }
 
 .team-member strong {
-    font-weight: 700;
-    font-size: 16px;
+  font-weight: 700;
+  font-size: 16px;
 }
 
+/* ===== INSPIRATION SECTION ===== */
 .inspiration-section {
-    margin-top: 30px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,14 +78,13 @@
   position: relative;
   background: radial-gradient(
       ellipse 120% 80% at 0% 50%,
-      #a4edf7 0%,     /* soft cyan near left */
-      #ddf3f6 50%,    /* lighter */
-      #ffffff 100%    /* pure white on right */
+      #a4edf7 0%,
+      #ddf3f6 50%,
+      #ffffff 100%
   );
   min-height: 100vh;
 }
 
-/* Left Content */
 .inspiration-text {
   flex: 1;
   max-width: 40%;
@@ -93,7 +93,7 @@
 .inspiration-text h1 {
   font-size: 60px;
   font-weight: 800;
-  color: #0047ab; /* bold blue */
+  color: #0047ab;
   line-height: 1.2;
   margin-bottom: 30px;
 }
@@ -105,7 +105,6 @@
   margin-top: 100px;
 }
 
-/* Right Image */
 .inspiration-image {
   flex: 1;
   display: flex;
@@ -117,7 +116,6 @@
   border-radius: 12px;
 }
 
-/* Decorative Waves */
 .inspiration-waves {
   position: absolute;
   top: 0;
@@ -127,4 +125,140 @@
   background: url("../images/waves.png") no-repeat center;
   background-size: contain;
   pointer-events: none;
+}
+
+/* =======================
+   RESPONSIVE DESIGN
+   ======================= */
+
+/* Tablets (<= 1024px) */
+@media (max-width: 1024px) {
+  .main {
+    margin: 0 60px;
+  }
+
+  .team-section, .inspiration-section {
+    padding: 40px 50px;
+  }
+
+  .team-heading {
+    font-size: 36px;
+  }
+
+  .inspiration-text h1 {
+    font-size: 44px;
+  }
+}
+
+/* Mobile Landscape (<= 768px) */
+@media (max-width: 768px) {
+  .main {
+    margin: 0 25px;
+  }
+
+  .team-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-left, .team-right {
+    max-width: 100%;
+  }
+
+  .team-left {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .team-heading {
+    font-size: 30px;
+  }
+
+  .team-text {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .team-right {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .inspiration-section {
+    flex-direction: column-reverse;
+    padding: 40px 30px;
+    min-height: auto;
+  }
+
+  .inspiration-text, .inspiration-image {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .inspiration-text h1 {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+
+  .inspiration-email {
+    font-size: 16px;
+    margin-top: 40px;
+  }
+
+  .inspiration-image img {
+    max-width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .inspiration-waves {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+/* Small Mobile Portrait (<= 480px) */
+@media (max-width: 480px) {
+  .main {
+    margin: 0 15px;
+  }
+
+  .team-section, .inspiration-section {
+    padding: 30px 20px;
+  }
+
+  .team-heading {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .team-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .team-right {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .inspiration-text h1 {
+    font-size: 28px;
+  }
+
+  .inspiration-email {
+    font-size: 14px;
+    margin-top: 25px;
+  }
+
+  .inspiration-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .inspiration-waves {
+    width: 180px;
+    height: 120px;
+  }
 }

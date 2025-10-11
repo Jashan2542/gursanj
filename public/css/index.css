@@ -3,6 +3,8 @@
     font-size: 1.8rem;
     font-weight: 700;
     color: #333;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 /* Buttons */
@@ -56,15 +58,16 @@
 .custom-table th {
     background: #4e73df;
     color: #fff;
-    padding: 14px;
+    padding: 12px;
     font-size: 0.95rem;
     text-align: left;
 }
 
 .custom-table td {
-    padding: 12px 14px;
+    padding: 10px 12px;
     border-bottom: 1px solid #eee;
     vertical-align: middle;
+    font-size: 0.9rem;
 }
 
 .custom-table tr:hover {
@@ -74,8 +77,8 @@
 /* Link Buttons */
 .link-btn {
     display: inline-block;
-    padding: 6px 12px;
-    font-size: 0.85rem;
+    padding: 5px 10px;
+    font-size: 0.8rem;
     border-radius: 4px;
     background: #1cc88a;
     color: #fff;
@@ -87,25 +90,66 @@
     background: #17a673;
 }
 
-.btn{
+.btn {
     margin: 5px;
 }
 
 /* Description Column */
 .desc-col {
-    max-width: 250px;
+    max-width: 220px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-/* Responsive */
+/* Responsive: Compact for Mobile */
 @media (max-width: 768px) {
-    .custom-table th, .custom-table td {
-        font-size: 0.85rem;
-        padding: 10px;
-    }
     .page-title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .custom-table {
+        width: 95%;
+        margin: 10px auto;
+        border-radius: 6px;
+    }
+
+    .custom-table th, .custom-table td {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+    }
+
+    .desc-col {
+        max-width: 100px;
+    }
+
+    .btn, .link-btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        border-radius: 4px;
+    }
+
+    .btn {
+        margin: 3px 2px;
+    }
+
+    /* Reduce table scroll issue on small screens */
+    .custom-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* For tighter mobile layout */
+    body {
+        padding: 0 6px;
+    }
+}
+ 
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
     }
 }

@@ -1,4 +1,13 @@
-<link rel="stylesheet" href="{{ asset('css/blog-form.css') }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/blog-form.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    
 
 <div class="container mt-4">
     <h2 class="mb-3">Edit Blog</h2>
@@ -42,3 +51,6 @@
         <a href="{{ route('admin.blogs.index') }}" class="btn btn-secondary">Cancel</a>
     </form>
 </div>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 /* General Reset */
 body {
     margin: 0px;
+    padding-top: 100px;
     font-family: 'Poppins', sans-serif;
     color: #333;
     background-color: #f9f9f9;
@@ -8,6 +9,11 @@ body {
 
 /* Top Header */
 .top-header {
+     position: fixed;
+    top: 0;
+    left: 0;
+    width: 90%;
+    z-index: 999;  /* keeps header on top */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +21,6 @@ body {
     background-color: white;
     box-shadow: 4px 4px 6px rgba(54, 131, 220, 0.226);
     margin: 0px 30px;
-    margin-top: 12px;
     border-radius: 30px 0px 30px 0px;
 }
 
@@ -67,60 +72,80 @@ body {
 }
 
 
-/* Mobile Responsiveness */
+/* --- Mobile Toggle Setup (place this at the end of your CSS file) --- */
+
+/* Make sure the toggle is hidden on desktop */
+.menu-toggle {
+    display: none;
+ }
+
+/* Mobile overrides */
 @media (max-width: 768px) {
-    /* Stack elements vertically on smaller screens */
-    .top-header {
-        flex-direction: column;
-        padding: 10px;
-        margin: 0px;
-    }
+  /* Ensure header spans full width on mobile (override earlier width:90% etc.) */
+  .top-header {
+    width: 90% !important;
+    margin: 0 !important;
+    padding: 12px 16px !important;
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    z-index: 2500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    /* Logo section */
-    .logo-section {
-        justify-content: center;
-        margin-bottom: 10px;
-    }
+  /* show hamburger */
+  .menu-toggle {
+    display: block !important;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #002855;
+    cursor: pointer;
+    z-index: 3000;
+  }
 
-    /* Logo size */
-    .logo {
-        width: 30px;
-        height: 30px;
-    }
+  /* Hide original menu by default on mobile */
+  .menu {
+    display: none !important;
+    position: absolute;
+    top: 64px; /* adjust according to header height */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-radius: 0 0 8px 8px;
+    z-index: 2000;
+  }
 
-    .company-name {
-        font-size: 18px;
-        text-align: center;
-    }
+  /* show when active */
+  .menu.active {
+    display: block !important;
+  }
 
-    /* Menu */
-    .menu ul {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-    }
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 0;
+    margin: 0;
+    list-style: none;
+  }
 
-    .menu ul li {
-        margin: 10px 0;
-    }
+  .menu ul li {
+    margin: 0;
+    padding: 10px 16px;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+  }
 
-    .menu ul li a {
-        font-size: 14px;
-    }
-}
-
-/* For even smaller devices (like phones in portrait mode) */
-@media (max-width: 480px) {
-    /* Reduce padding for even smaller screens */
-    .top-header {
-        padding: 5px 15px;
-    }
-
-    .company-name {
-        font-size: 16px;
-    }
-
-    .menu ul li a {
-        font-size: 12px;
-    }
+  .menu ul li a {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    color: #002855;
+    text-decoration: none;
+    padding: 6px 0;
+  }
 }

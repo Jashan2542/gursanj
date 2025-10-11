@@ -12,15 +12,15 @@ body {
     padding: 0 5%;
     margin-top: 15px;
     border-radius: 15px;
-  position: relative;
-  padding: 60px 80px;
-  background: linear-gradient(
-      to right,
-      #ffffff 0%,      /* keep pure white in the center */
-      #f0fcfe 40%,     /* very light cyan */
-      #d2f6fc 80%,     /* medium cyan */
-      #aee7f4 100%     /* darker cyan at far right */
-  );
+    position: relative;
+    padding: 60px 80px;
+    background: linear-gradient(
+        to right,
+        #ffffff 0%,      /* keep pure white in the center */
+        #f0fcfe 40%,     /* very light cyan */
+        #d2f6fc 80%,     /* medium cyan */
+        #aee7f4 100%     /* darker cyan at far right */
+    );
 }
 
 .left h1 {
@@ -57,7 +57,7 @@ body {
     border-radius: 15px;
 }
 
-
+/* Contact Form */
 .contact-container {
     max-width: 650px;
     margin: 20px auto;
@@ -100,7 +100,7 @@ body {
     font-size: 0.95rem;
 }
 
-.form-input {
+.form-input, .form-input-service {
     width: 95%;
     padding: 12px 14px;
     border: 1px solid #ddd;
@@ -109,13 +109,8 @@ body {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-input-service {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+.form-input-service{
+    width: 99%;
 }
 
 .form-input:focus {
@@ -146,4 +141,52 @@ textarea.form-input {
 .btn-submit:hover {
     background: #5848e3;
     transform: translateY(-2px);
+}
+
+/* ========== MOBILE RESPONSIVE STYLES ========== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 0 20px;
+        padding: 30px 20px;
+        height: auto;
+        text-align: center;
+    }
+
+    .left h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .contact {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .right {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .right img {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .contact-container {
+        margin: 10px 15px;
+        padding: 25px;
+    }
+
+    .contact-title {
+        font-size: 1.6rem;
+    }
+
+    .form-input {
+        width: 90%;
+    }
+
+    .form-input-service{
+        width: 100%;
+     }
 }

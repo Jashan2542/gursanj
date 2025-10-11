@@ -1,7 +1,6 @@
 .project-section {
     max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
+    margin: 0 180px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.8;
     color: #333;
@@ -13,6 +12,7 @@
     color: #0056b3; /* Blue heading */
     margin-bottom: 30px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .project-title {
@@ -37,4 +37,65 @@
 
 .project-section a:hover {
     text-decoration: underline;
+}
+
+/* ✅ Responsive Design */
+
+/* For tablets (max width 992px) */
+@media (max-width: 992px) {
+    .project-section {
+        margin: 0 60px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .project-title {
+        font-size: 24px;
+    }
+
+    .project-description {
+        font-size: 15px;
+    }
+}
+
+/* For mobile devices (max width 768px) */
+@media (max-width: 768px) {
+    .project-section {
+        margin: 0 20px; /* reduce side spacing */
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .project-title {
+        font-size: 20px;
+    }
+
+    .project-description {
+        font-size: 14px;
+        text-align: left; /* better readability */
+    }
+}
+
+/* For very small screens (max width 480px) */
+@media (max-width: 480px) {
+    .project-section {
+        margin: 0 10px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .project-title {
+        font-size: 18px;
+    }
+
+    .project-description {
+        font-size: 13px;
+        text-align: justify;
+    }
 }

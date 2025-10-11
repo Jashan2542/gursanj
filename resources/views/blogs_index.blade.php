@@ -18,6 +18,16 @@
 
                 {{-- Blog Content --}}
               <div class="blog-card-body">
+                @if ($blog->updated_at->gt($blog->created_at))
+                <span class="blog-date" title="Updated on {{ $blog->updated_at->format('d M Y, h:i A') }}">
+                Updated {{ $blog->updated_at->diffForHumans() }}
+                </span>
+                @else
+                <span class="blog-date" title="Posted on {{ $blog->created_at->format('d M Y, h:i A') }}">
+                {{ $blog->created_at->diffForHumans() }}
+                </span>
+                @endif
+                
                    <span class="blog-subject">{{ Str::limit(strip_tags($blog->subject), 25) }}</span>
                    <h5 class="blog-title">{{ Str::limit(strip_tags($blog->title), 25) }}</h5>
                    <p class="blog-desc">{{ Str::limit(strip_tags($blog->description), 100) }}</p>

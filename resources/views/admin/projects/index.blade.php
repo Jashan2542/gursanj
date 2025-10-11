@@ -1,5 +1,12 @@
-<link rel="stylesheet" href="{{ asset('css/index.css') }}">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <title>Document</title>
+</head>
+<body>
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2 class="page-title">Manage Projects</h2>
@@ -14,9 +21,9 @@
             <tr>
                 <th>Title</th>
                 <th>Description</th>
-                <th>Website</th>
-                <th>Android</th>
-                <th>iOS</th>
+                <th class="hide-mobile">Website</th> 
+                <th class="hide-mobile">Android</th>
+                <th class="hide-mobile">iOS</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -25,17 +32,17 @@
                 <tr>
                     <td class="title-col">{{ $project->title }}</td>
                     <td class="desc-col">{{ Str::limit($project->description, 80) }}</td>
-                    <td>
+                    <td class="hide-mobile">
                         @if($project->website_link)
                             <a href="{{ $project->website_link }}" target="_blank" class="link-btn">Website</a>
                         @endif
                     </td>
-                    <td>
+                    <td class="hide-mobile">
                         @if($project->android_link)
                             <a href="{{ $project->android_link }}" target="_blank" class="link-btn">Android</a>
                         @endif
                     </td>
-                    <td>
+                    <td class="hide-mobile">
                         @if($project->ios_link)
                             <a href="{{ $project->ios_link }}" target="_blank" class="link-btn">iOS</a>
                         @endif
@@ -59,3 +66,6 @@
         </tbody>
     </table>
 </div>
+
+</body>
+</html>

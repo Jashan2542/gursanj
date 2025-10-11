@@ -1,4 +1,4 @@
-/* Page Layout */
+/* ===== Page Layout ===== */
 .dashboard {
     max-width: 900px;
     margin: 40px auto;
@@ -15,7 +15,7 @@
     font-weight: bold;
 }
 
-/* Message Card */
+/* ===== Message Card ===== */
 .message-card {
     background: #fff;
     padding: 25px;
@@ -28,7 +28,7 @@
     transform: translateY(-2px);
 }
 
-/* Info Section */
+/* ===== Info Section ===== */
 .message-info {
     display: flex;
     justify-content: space-between;
@@ -47,7 +47,7 @@
     font-size: 15px;
 }
 
-/* Labels & Values */
+/* ===== Labels & Values ===== */
 .label {
     font-weight: 600;
     color: #555;
@@ -58,7 +58,7 @@
     color: #000;
 }
 
-/* Description Section */
+/* ===== Description Section ===== */
 .desc-section {
     margin-top: 20px;
 }
@@ -78,19 +78,90 @@
     white-space: pre-wrap;
 }
 
-/* Button */
+/* ===== Button ===== */
 .btn.back-btn {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 18px;
     font-size: 15px;
-    background: #007bff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
     color: #fff;
-    border-radius: 6px;
+    border-radius: 8px;
     text-decoration: none;
+    text-align: center;
     transition: 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 123, 255, 0.3);
 }
 
 .btn.back-btn:hover {
-    background: #0056b3;
+    background: linear-gradient(135deg, #0056b3, #004094);
+    transform: translateY(-2px);
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .dashboard {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    .page-title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .message-card {
+        padding: 18px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+
+    .message-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .info-left p,
+    .info-right p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .desc-section h4 {
+        font-size: 16px;
+    }
+
+    .desc-box {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn.back-btn {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+        margin-top: 25px;
+        border-radius: 10px;
+    }
+}
+
+/* ===== Extra Small Devices (phones < 480px) ===== */
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 20px;
+    }
+
+    .message-card {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .desc-box {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .btn.back-btn {
+        font-size: 15px;
+    }
 }

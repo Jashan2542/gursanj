@@ -1,11 +1,27 @@
-/* Page Title */
+/* 🌐 ====== General Reset ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 🏷️ ====== Page Title ====== */
 .page-title {
     font-size: 1.8rem;
     font-weight: 700;
     color: #333;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-/* Buttons */
+/* 🎨 ====== Buttons ====== */
 .btn {
     padding: 8px 16px;
     border-radius: 6px;
@@ -16,6 +32,7 @@
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
+    margin: 4px;
 }
 
 .btn-primary {
@@ -50,15 +67,26 @@
     background: #c0392b;
 }
 
-/* Table Styling */
+/* 📋 ====== Table Container ====== */
+.table-wrapper {
+    width: 95%;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 480px; /* Desktop height */
+    padding: 10px;
+}
+
+/* 🧾 ====== Custom Table ====== */
 .custom-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    background: #fff;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    min-width: 650px; /* Keeps layout stable for large screens */
 }
 
 .custom-table th {
@@ -67,6 +95,9 @@
     padding: 14px;
     font-size: 0.95rem;
     text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .custom-table td {
@@ -79,7 +110,7 @@
     background: #f8f9fc;
 }
 
-/* Table Image */
+/* 🖼️ ====== Table Image ====== */
 .table-img {
     width: 80px;
     height: 60px;
@@ -87,12 +118,89 @@
     border-radius: 6px;
 }
 
-/* Pagination */
+/* 📄 ====== Pagination ====== */
 .pagination-wrapper {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
-.btn{
-    margin: 5px;
+/* 📱 ======= Mobile & Tablet Design ======= */
+@media (max-width: 1024px) {
+    .custom-table {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .table-wrapper {
+        width: 95%;
+        max-height: 400px;
+        padding: 8px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    .custom-table {
+        min-width: 540px; /* Better scroll width for mobile */
+    }
+
+    .custom-table th, .custom-table td {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+
+    .table-img {
+        width: 65px;
+        height: 45px;
+    }
+
+    .btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+        margin: 2px;
+    }
+}
+
+/* 📱 ======= Small Phones ======= */
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.2rem;
+    }
+
+    .table-wrapper {
+        width: 92%;
+        max-height: 340px;
+        padding: 6px;
+    }
+
+    .custom-table {
+        min-width: 350px; /* Perfect fit for small devices */
+    }
+
+    .custom-table th, .custom-table td {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+    }
+
+    .table-img {
+        width: 55px;
+        height: 40px;
+    }
+
+    .btn {
+        padding: 5px 8px;
+        font-size: 0.75rem;
+    }
+}
+
+/* 🕹️ ======= Hide columns on small screens ======= */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
 }

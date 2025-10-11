@@ -1,5 +1,12 @@
-<link rel="stylesheet" href="{{ asset('css/blog.css') }}">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ asset('css/blog.css') }}">
+    <title>Document</title>
+</head>
+<body>
 <div class="container mt-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2 class="page-title">Manage Blogs</h2>
@@ -15,7 +22,7 @@
                 <th>Image</th>
                 <th>Title</th>
                 <th>Description</th>
-                <th>Subject</th>
+                <th class="hide-mobile">Subject</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -31,7 +38,7 @@
                 </td>
                 <td>{{ Str::limit($blog->title, 30) }}</td>
                 <td>{{ Str::limit(strip_tags($blog->description), 50) }}</td>
-                <td>{{ Str::limit($blog->subject, 30) }}</td> 
+                <td class="hide-mobile">{{ Str::limit($blog->subject, 30) }}</td> 
                 <td>
                     <a href="{{ route('admin.blogs.edit', $blog->id) }}" class="btn btn-sm btn-warning">Edit</a>
                     <form action="{{ route('admin.blogs.destroy', $blog->id) }}" method="POST" class="d-inline">
@@ -53,3 +60,6 @@
         {{ $blogs->links() }}
     </div>
 </div>
+
+</body>
+</html>
