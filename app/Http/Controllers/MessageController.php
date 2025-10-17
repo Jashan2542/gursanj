@@ -14,21 +14,27 @@ class MessageController extends Controller
     }
 
     // Store message from contact form
-    public function store(Request $request)
-    {
-        $request->validate([
-            'title'       => 'required|string|max:255',
-            'service'     => 'required|string|max:255',
-            'name'        => 'required|string|max:255',
-            'phone'       => 'required|string|max:15',
-            'email'       => 'required|email|max:255',
-            'description' => 'required|string',
-        ]);
+   public function store(Request $request)
+{
+    $request->validate([
+        'title'       => 'required|string|max:255',
+        'service'     => 'required|string|max:255',
+        'name'        => 'required|string|max:255',
+        'phone'       => 'required|string|max:15',
+        'email'       => 'required|email|max:255',
+        'description' => 'required|string',
+    ]);
 
-        Message::create($request->all());
+    Message::create($request->all());
 
-        return redirect()->route('contact.create')->with('success', 'Your message has been submitted successfully!');
+    // If the request is AJAX, return JSON (no redirect)
+    if ($request->ajax()) {
+        return response()->json(['success' => true, 'message' => 'Message sent successfully, We will contact you in 24hrs.']);
     }
+
+    // Otherwise (normal form submit), redirect as fallback
+    return redirect()->back()->with('success', true);
+}
 
     // Show all messages in admin panel
     public function index()

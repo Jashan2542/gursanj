@@ -275,14 +275,26 @@ main {
     letter-spacing: 1px;
 }
 
-.alert-success-box {
-    background: #d4edda;
-    color: #155724;
-    padding: 12px 18px;
+.success-popup {
+    position: fixed;
+    top: 20px;
+    right: 450px;
+    background: #46a15ba0;
+    color: rgb(0, 0, 0);
+    padding: 15px 25px;
     border-radius: 8px;
-    margin-bottom: 5px;
-    border-left: 5px solid #28a745;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInOut 10s ease forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(-10px); }
+    10%, 90% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
 }
 
 .contact-form .form-group {

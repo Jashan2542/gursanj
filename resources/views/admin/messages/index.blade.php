@@ -47,9 +47,12 @@
         </table>
     </div>
 
+   @if ($messages->hasPages())
     <div class="pagination-box">
-        {{ $messages->links() }}
+        {{ $messages->links('pagination::bootstrap-4') }}
     </div>
+@endif
+
 </div>
 
 </body>

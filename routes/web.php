@@ -75,8 +75,6 @@ Route::get('/blogs', [UserBlogController::class, 'index'])->name('user.blogs.ind
 Route::get('/blogs/{id}', [UserBlogController::class, 'show'])->name('user.blogs.show');
 
 
-
-
 // Contact Form (User side)
 Route::get('/contact', [MessageController::class, 'create'])->name('contact.form');
 Route::post('/contact', [MessageController::class, 'store'])->name('contact.store');

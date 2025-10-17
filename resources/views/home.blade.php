@@ -105,16 +105,19 @@
         </div>
     </section>
 
-    <div class="contact-container">
+   <div class="contact-container">
     <h2 class="contact-title">Contact Us</h2>
 
-    @if(session('success'))
-        <div class="alert-success-box">{{ session('success') }}</div>
-    @endif
+   @if(session('success'))
+<div id="success-popup" class="success-popup">
+    <p>✅ Your message has been sent successfully!<br>
+        we will contact you in 24hrs.
+    </p>
+</div>
+@endif
 
     <form action="{{ route('contact.store') }}" method="POST" class="contact-form">
         @csrf
-
         <div class="form-group">
             <label class="form-label">Title</label>
             <input type="text" name="title" class="form-input" required>
@@ -125,10 +128,10 @@
             <select name="service" class="form-input-service" required>
                 <option value="">-- Select Service --</option>
                 <option value="Web Development">Web Development</option>
-                <option value="Mobile App">Mobile App</option>
+                <option value="Mobile App">Mobile App (Android and IOS)</option>
                 <option value="UI/UX Designing">UI/UX Designing</option>
                 <option value="Quality Analyst">Quality Analyst</option>
-                <option value="Socail Media (Post/Banner)">Socail Media (Post/Banner)</option>
+                <option value="Social Media (Post/Banner)">Social Media (Post/Banner)</option>
                 <option value="Others">Others</option>
             </select>
         </div>
@@ -156,4 +159,21 @@
         <button type="submit" class="btn-submit">Send Message</button>
     </form>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const popup = document.getElementById('success-popup');
+
+        if (popup) {
+            // Auto-remove after 10 seconds
+            setTimeout(() => popup.remove(), 10000);
+
+            // Hide popup when user clicks anywhere
+            document.addEventListener('click', () => {
+                popup.remove();
+            });
+        }
+    });
+</script>
+
 </main>
